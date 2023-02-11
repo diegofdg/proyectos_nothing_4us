@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Chrome slider UV Filter effect | Nothing4us</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> Chrome slider UV Filter effect | Nothing4us </title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class='sun'></div>
+<div class='sun--bg'></div>
+<input class='slider' step='any' type='range'>
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg'>
+  <defs>
+    <filter id='goovey'>
+      <feturbulence basefrequency='.06' numoctaves='20' result='warpper' type='fractalNoise'></feturbulence>
+      <fecolormatrix in='warpper' type='hueRotate'>
+        <animate attributename='values' attributetype='XML' dur='9s' repeatcount='indefinite' values='0;110;150;210;280;360'></animate>
+      </fecolormatrix>
+      <fedisplacementmap in='SourceGraphic' scale='14' xchannelselector='R' ychannelselector='G'></fedisplacementmap>
+    </filter>
+  </defs>
+</svg>
+<!-- partial -->
+  
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>

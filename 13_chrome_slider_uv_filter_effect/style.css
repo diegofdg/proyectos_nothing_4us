@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  background: black;
+  height: 100vh;
+  overflow: hidden;
+}
+body .sun,
+body .sun--bg {
+  position: absolute;
+  filter: url("#goovey");
+  height: 100vh;
+  -webkit-clip-path: circle(281px at 50% 50%);
+          clip-path: circle(281px at 50% 50%);
+  background: url("https://d2r55xnwy6nx47.cloudfront.net/uploads/2018/07/SolarFull_SeanDoran_2880FullwidthLede-2880x1620.jpg");
+  background-position: center;
+  width: 100%;
+  background-size: cover;
+}
+body .sun--bg {
+  filter: url(index.html);
+  -webkit-clip-path: none;
+  z-index: -1;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+}
+
+input[type=range] {
+  margin: auto;
+  -webkit-appearance: none;
+  position: absolute;
+  overflow: hidden;
+  outline: none;
+  height: 100vh;
+  background: transparent;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 0;
+  /* iOS */
+}
+
+::-webkit-slider-runnable-track {
+  background: transparent;
+}
+
+/*
+* 1. Set to 0 width and remove border for a slider without a thumb
+*/
+::-webkit-slider-thumb {
+  mix-blend-mode: hue;
+  -webkit-appearance: none;
+  width: 30px;
+  /* 1 */
+  filter: blur(30px);
+  height: 30px;
+  background: #fff;
+  box-shadow: -100vw 0 0 100vw dodgerblue;
+}
+
+::-moz-range-track {
+  height: 40px;
+  background: #ddd;
+}
+
+::-moz-range-thumb {
+  background: #fff;
+  height: 40px;
+  width: 20px;
+  border: 3px solid #999;
+  border-radius: 0 !important;
+  box-shadow: -100vw 0 0 100vw dodgerblue;
+  box-sizing: border-box;
+}
+
+::-ms-fill-lower {
+  background: dodgerblue;
+}
+
+::-ms-thumb {
+  background: #fff;
+  border: 2px solid #999;
+  height: 40px;
+  width: 20px;
+  box-sizing: border-box;
+}
+
+::-ms-tooltip {
+  display: none;
+}
