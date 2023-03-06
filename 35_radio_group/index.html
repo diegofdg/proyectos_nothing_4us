@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Radio Group | Nothing4us</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> Radio Group | Nothing4us </title>
+  <style>
+    .rotate-45 {
+        --transform-rotate: 45deg;
+        transform: rotate(45deg);
+    }
+
+    .group:hover .group-hover\:flex {
+        display: flex;
+    }
+</style>
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="flex flex-col items-center justify-center w-screen h-screen p-10 bg-gray-900">
+
+	<!-- Component Start -->
+	<form
+		  class="w-full max-w-screen-sm space-y-6"
+		  action="">
+		<div>
+			<input class="sr-only peer" type="radio" name="options" id="option_1">
+			<label
+				   class="flex items-center h-24 px-8 bg-gray-700 bg-opacity-50 border border-gray-700 rounded cursor-pointer hover:bg-opacity-60 peer-checked:bg-indigo-900 peer-checked:border-indigo-700 ring-opacity-30 ring-indigo-600 peer-checked:ring-4 group"
+				   for="option_1">
+				<div class="flex items-center justify-center w-6 h-6 border border-gray-600 rounded-full peer-checked:group:bg-indigo-600">
+					<svg xmlns="http://www.w3.org/2000/svg" class="hidden w-4 h-4 text-indigo-200 fill-current peer-checked:group:visible" viewBox="0 0 20 20" fill="currentColor">
+						<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+					</svg>
+				</div>
+				<div class="flex flex-col ml-6">
+					<span class="text-xl font-medium text-gray-50">Launch</span>
+					<span class="text-sm font-light text-gray-200">Exactly what you need to get started.</span>
+				</div>
+				<span class="ml-auto text-2xl font-light text-gray-50">$25</span>
+			</label>
+		</div>
+		<div>
+			<input class="sr-only peer" checked type="radio" name="options" id="option_2">
+			<label
+				   class="flex items-center h-24 px-8 bg-gray-700 bg-opacity-50 border border-gray-700 rounded cursor-pointer hover:bg-opacity-60 peer-checked:bg-indigo-900 peer-checked:border-indigo-700 ring-opacity-30 ring-indigo-600 peer-checked:ring-4 group"
+				   for="option_2">
+				<div class="flex items-center justify-center w-6 h-6 border border-gray-600 rounded-full peer-checked:group:bg-indigo-600">
+					<svg xmlns="http://www.w3.org/2000/svg" class="hidden w-4 h-4 text-indigo-200 fill-current peer-checked:group:visible" viewBox="0 0 20 20" fill="currentColor">
+						<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+					</svg>
+				</div>
+				<div class="flex flex-col ml-6">
+					<span class="text-xl font-medium text-gray-50">Orbit</span>
+					<span class="text-sm font-light text-gray-200">Reach out and discover your potential.</span>
+				</div>
+				<span class="ml-auto text-2xl font-light text-gray-50">$89</span>
+			</label>
+		</div>
+		<div>
+			<input class="sr-only peer" type="radio" name="options" id="option_3">
+			<label
+				   class="flex items-center h-24 px-8 bg-gray-700 bg-opacity-50 border border-gray-700 rounded cursor-pointer hover:bg-opacity-60 peer-checked:bg-indigo-900 peer-checked:border-indigo-700 ring-opacity-30 ring-indigo-600 peer-checked:ring-4 group"
+				   for="option_3">
+				<div class="flex items-center justify-center w-6 h-6 border border-gray-600 rounded-full peer-checked:group:bg-indigo-600">
+					<svg xmlns="http://www.w3.org/2000/svg" class="hidden w-4 h-4 text-indigo-200 fill-current peer-checked:group:visible" viewBox="0 0 20 20" fill="currentColor">
+						<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+					</svg>
+				</div>
+				<div class="flex flex-col ml-6">
+					<span class="text-xl font-medium text-gray-50">Moonshot</span>
+					<span class="text-sm font-light text-gray-200">Go where only a few have gone before.</span>
+				</div>
+				<span class="ml-auto text-2xl font-light text-gray-50">$199</span>
+			</label>
+		</div>
+		<div>
+			<input class="sr-only peer" type="radio" name="options" id="option_4">
+			<label
+				   class="flex items-center h-24 px-8 bg-gray-700 bg-opacity-50 border border-gray-700 rounded cursor-pointer hover:bg-opacity-60 peer-checked:bg-indigo-900 peer-checked:border-indigo-700 ring-opacity-30 ring-indigo-600 peer-checked:ring-4 group"
+				   for="option_4">
+				<div class="flex items-center justify-center w-6 h-6 border border-gray-600 rounded-full peer-checked:group:bg-indigo-600">
+					<svg xmlns="http://www.w3.org/2000/svg" class="hidden w-4 h-4 text-indigo-200 fill-current peer-checked:group:visible" viewBox="0 0 20 20" fill="currentColor">
+						<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+					</svg>
+				</div>
+				<div class="flex flex-col ml-6">
+					<span class="text-xl font-medium text-gray-50">Deep Space</span>
+					<span class="text-sm font-light text-gray-200">Unlock mysteries and forge new paths.</span>
+				</div>
+				<span class="ml-auto text-2xl font-light text-gray-50">$499</span>
+			</label>
+		</div>
+		<button class="flex items-center h-12 px-6 ml-auto bg-indigo-700 rounded text-indigo-50 hover:bg-indigo-600 focus:outline-none focus:ring ring-indigo-500">Buy now</button>
+	</form>
+	<!-- Component End  -->
+
+</div>
+<!-- partial -->
+  <script src='https://cdn-tailwindcss.vercel.app/'></script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
