@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Oswald", sans-serif;
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Bebas Neue", sans-serif;
+  text-transform: uppercase;
+  color: #f0f0f0;
+  letter-spacing: 2px;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 900px;
+  height: 100%;
+  max-height: 700px;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+  background: #f0f0f0;
+}
+
+.bkg {
+  width: 100%;
+  height: 100%;
+  background: #a4a4a4;
+  background: linear-gradient(0deg, #797979, #494949 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-clip-path: url("#wrapMask");
+          clip-path: url("#wrapMask");
+}
+
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 4;
+  width: 100%;
+  padding: 1.5em;
+  display: grid;
+  grid-template-columns: 1fr 16%;
+}
+.header svg {
+  width: 18px;
+  stroke: #f0f0f0;
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+}
+.header svg:nth-child(1) {
+  transform: rotateZ(90deg);
+}
+.header div {
+  text-align: right;
+}
+.header div svg {
+  margin-left: 20px;
+}
+
+.panel {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.panel img#liberty {
+  width: 95%;
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  bottom: -250px;
+  transform: translateX(-50%);
+}
+.panel h1#panel-h1 {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  z-index: 9;
+  top: 140px;
+  font-size: 8rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.intro {
+  z-index: 6;
+  text-align: center;
+  transform: translateY(-60px);
+}
+.intro h1 {
+  font-size: 4rem;
+}
+.intro h3 {
+  font-size: 2.4rem;
+  margin-top: -16px;
+}
+.intro img {
+  width: 50px;
+  opacity: 0.6;
+}
+
+.models {
+  position: absolute;
+  top: 50%;
+  left: 2em;
+  z-index: 11;
+}
+.models li {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: #8a8a8a;
+}
+.models li:nth-child(2) {
+  color: #f0f0f0;
+  font-size: 0.9rem;
+  list-style-type: square;
+}
+
+.rotator {
+  position: absolute;
+  top: 45%;
+  right: 2em;
+  z-index: 12;
+}
+.rotator p {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #a4a4a4;
+  text-transform: uppercase;
+  padding: 5px 0;
+}
+
+.specs,
+.chars {
+  position: absolute;
+  top: 15%;
+  width: 50%;
+  z-index: 20;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 10% 1fr;
+}
+.specs h2,
+.chars h2 {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  color: #4b4b4b;
+  text-shadow: none;
+}
+.specs dl:nth-child(0),
+.chars dl:nth-child(0) {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.specs dl:nth-child(1),
+.chars dl:nth-child(1) {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.specs dl dt,
+.chars dl dt {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.specs dl dd,
+.chars dl dd {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #717171;
+}
+
+.outro {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  text-align: center;
+  padding: 1em;
+}
+.outro h2 {
+  font-size: 3rem;
+}
+.outro p {
+  font-size: 1.7rem;
+  color: #f0f0f0;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+}
+.outro button {
+  margin: 20px 0;
+  border: 1px solid #9b9b9b;
+  background: #646464;
+  padding: 5px 10px;
+  outline: none;
+  cursor: pointer;
+  color: #d7d7d7;
+  font-size: 1.2rem;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 1em;
+  text-align: center;
+}
+footer p {
+  font-size: 0.9rem;
+}
+footer p a {
+  text-decoration: none;
+  color: orangered;
+}
+
+#mask {
+  display: block;
+  position: absolute;
+  z-index: 40;
+}
+
+@-moz-document url-prefix() {
+  .rotator svg {
+    width: 100%;
+    height: 60px;
+  }
+}

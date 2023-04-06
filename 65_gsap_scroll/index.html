@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen -  GSAP - Scroll | Nothing4us </title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> GSAP - Scroll | Nothing4us </title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container" id="container">
+
+  <div class="wrapper" id="wrapper">
+
+    <div class="header">
+      <svg version="1.1" viewBox="0 0 24 24">
+        <line x1="12" y1="20" x2="12" y2="10"></line>
+        <line x1="18" y1="20" x2="18" y2="4"></line>
+        <line x1="6" y1="20" x2="6" y2="16"></line>
+      </svg>
+      <div>
+        <svg version="1.1" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <svg version="1.1" viewBox="0 0 24 24">
+          <rect x="3" y="3" width="7" height="7"></rect>
+          <rect x="14" y="3" width="7" height="7"></rect>
+          <rect x="14" y="14" width="7" height="7"></rect>
+          <rect x="3" y="14" width="7" height="7"></rect>
+        </svg>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="intro" id="intro">
+        <img id="logo" src="https://www.sicontis.com/codepen/cpc-gsap-scroll/piaggio-logo.svg" alt="piaggio logo svg">
+        <h1 id="intro-h1">Ready to Cruise</h1>
+        <h3 id="intro-h3">Relax and enjoy the ride</h3>
+      </div>
+      <img id="liberty" src="https://www.sicontis.com/codepen/cpc-gsap-scroll/liberty-150.png" alt="liberty 150 png">
+      <h1 id="panel-h1">Liberty 150</h1>
+      <ul class="models">
+        <li>Liberty 50</li>
+        <li>Liberty 150</li>
+        <li>Liberty 150 Sport</li>
+      </ul>
+      <div class="rotator">
+        <p>0&deg;</p>
+        <svg version="1.1" viewBox="0 0 10 30">
+          <path d="M5 5.663V40" fill="none" stroke="#999" stroke-width=".92" transform="matrix(1 0 0 1.16492 0 -6.597)" />
+          <circle cx="7.423" cy="7.159" r="2.577" fill="#fff" transform="translate(-2.423 -4.582)" />
+        </svg>
+        <p>360&deg;</p>
+      </div>
+      <div class="specs">
+        <h2>Engine</h2>
+        <dl>
+          <dt>Bore x Stroke</dt>
+          <dd>58mm x 58.6mm</dd>
+
+          <dt>Clutch</dt>
+          <dd>Automatic centrifugal dry clutch</dd>
+
+          <dt>Consumption</dt>
+          <dd>36.8 Km/I (WMTC cycle)</dd>
+
+          <dt>Cooling</dt>
+          <dd>Air</dd>
+
+          <dt>CO2 Emissions</dt>
+          <dd>65 g/Km</dd>
+
+          <dt>Distribution</dt>
+          <dd>Single overhead camshaft, 3 valves (2 input, 1 output)</dd>
+
+          <dt>Engine</dt>
+          <dd>Single cylinder 4-stroke -i-get</dd>
+        </dl>
+        <dl>
+          <dt>Engine Capacity</dt>
+          <dd>155c</dd>
+
+          <dt>Fuel system</dt>
+          <dd>Electronic injection</dd>
+
+          <dt>Lubrication</dt>
+          <dd>Oil with wet sump</dd>
+
+          <dt>Max Power</dt>
+          <dd>12.9hp (9.6kW) @ 7,750 rpm</dd>
+
+          <dt>Max Torque</dt>
+          <dd>9.58 ft-lbs (13 Nm) @ 5250 rpm</dd>
+
+          <dt>Transmission</dt>
+          <dd>Automatic CVT</dd>
+
+          <dt>Starter</dt>
+          <dd>Electric</dd>
+        </dl>
+      </div>
+      <div class="chars">
+        <h2>Characteristics</h2>
+        <dl>
+          <dt>Frame</dt>
+          <dd>High resistance tubular steel</dd>
+
+          <dt>Front tyre</dt>
+          <dd>Tubeless 90/80 - 16", 51J</dd>
+
+          <dt>Rear brake</dt>
+          <dd>Tamburo 140mm</dd>
+
+          <dt>Seat height</dt>
+          <dd>31.1" (790mm)</dd>
+
+          <dt>Front suspension</dt>
+          <dd>Telescopic hydraulic fork, 76mm stroke</dd>
+
+          <dt>Rear tyre</dt>
+          <dd>Tubeless 100/80 - 14", 54J</dd>
+
+          <dt>ABS</dt>
+          <dd>Front wheel standard ABS</dd>
+        </dl>
+        <dl>
+          <dt>Fuel Tank Capacity</dt>
+          <dd>1.58 gal (6 liters)</dd>
+
+          <dt>Rear suspension</dt>
+          <dd>Single hydraulic shock absorber with 5-position preload adjustment</dd>
+
+          <dt>Front brake</dt>
+          <dd>Single disk 240mm</dd>
+
+          <dt>Length/Width/Wheelbase</dt>
+          <dd>76.5" / 27.1" / 52.7"</dd>
+
+          <dt>Emission compliance</dt>
+          <dd>EPA, CARB, Transport Canada</dd>
+        </dl>
+      </div>
+      <div class="outro">
+        <h2>Piaggio Liberty 150</h2>
+        <p>$2999.00</p>
+        <button>Learn More</button>
+      </div>
+    </div>
+    <div class="bkg"></div>
+  </div>
+  
+  <svg version="1.1" id="mask">
+    <defs>
+      <clipPath id="wrapMask">
+        <rect id="wrapWin" width="1000" height="800" fill="black" />
+      </clipPath>
+    </defs>
+  </svg>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
