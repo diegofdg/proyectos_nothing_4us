@@ -1,0 +1,11 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow: y-scroll;
+  height: 100%;
+}
+
+#bub-line, #bub-line2 {
+  display: none;
+}
