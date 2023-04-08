@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Controlled Clock | Nothing4us</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> Controlled Clock | Nothing4us </title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- svg making up the clock -->
+<svg viewBox="0 0 100 100" width="100" height="100">
+    <defs>
+        <!-- filters describing the shadows, applied on the larger and smaller shapes -->
+        <filter id="shadow-large">
+            <feDropShadow dx="0" dy="0" stdDeviation="4"/>
+        </filter>
+        <filter id="shadow-small">
+                <feDropShadow dx="0" dy="0" stdDeviation="0.2"/>
+        </filter>
+
+        <!-- mask used to cut out a sliver of the overlaid circle -->
+        <mask
+            id="mask">
+            <g transform="translate(50 50)">
+                <!-- starting at -15, incrementing by 30 for each hour -->
+                <g
+                    class="hours" transform="rotate(-15)">
+                    <circle
+                        cx="0"
+                        cy="0"
+                        r="50"
+                        fill="#fff">
+                    </circle>
+                    <path
+                        d="M 0 -50 v 50 l 28.86 -50"
+                        fill="#000">
+                    </path>
+                </g>
+            </g>
+        </mask>
+    </defs>
+
+    <!-- circle making up the bottom of the clock -->
+    <circle
+        cx="50"
+        cy="50"
+        r="46"
+        fill="#303335">
+    </circle>
+
+    <!-- circle with the accent color, overlaid before the text elements -->
+    <circle
+        cx="50"
+        cy="50"
+        r="42"
+        fill="#EA3F3F"
+        filter="url(#shadow-large)">
+    </circle>
+
+    <!-- text elements, positioned from the center around the clock -->
+    <g
+        class="clock--face"
+        font-size="8px"
+        transform="translate(50 50)"
+        text-anchor="middle"
+        dominant-baseline="middle">
+        <!-- the elements are included through the script, at intervals of 30 degrees -->
+        <!--
+        <text
+            transform="rotate(-90) translate(35 0) rotate(90)" >
+            12
+        </text>
+
+        <text
+            transform="rotate(-0) translate(35 0) rotate(0)" >
+            03
+        </text>
+        -->
+    </g>
+
+    <!-- circle overlaid on the accent circle and text elements -->
+    <circle
+        mask="url(#mask)"
+        cx="50"
+        cy="50"
+        r="50"
+        fill="#303335">
+    </circle>
+
+    <!-- smaller circle on which the hands sit -->
+    <circle
+        cx="50"
+        cy="50"
+        r="4"
+        filter="url(#shadow-small)"
+        fill="#303335">
+    </circle>
+
+    <!-- clock's hands -->
+    <!-- centered in the clock and rotated according to the passage of time in the 0-360 range -->
+    <g
+        class="hands"
+        transform="translate(50 50)"
+        >
+        <g
+            class="minutes"
+            transform="rotate(240)"> <!-- change rotation of this group to affect both clock's hand -->
+            <path
+                fill="#fff"
+                d="M -0.4 8 h 0.8 v -33 h -0.8 z">
+            </path>
+            <circle
+                fill="#303335"
+                cx="0"
+                cy="0"
+                r="0.6">
+            </circle>
+        </g>
+
+        <g
+            class="seconds"
+            transform="rotate(80)"> <!-- change rotation of this group to affect both clock's hand -->
+            <path
+                fill="#EA3F3F"
+                d="M -0.4 10 h 0.8 v -45 h -0.8 z">
+            </path>
+            <circle
+                stroke-width="0.4"
+                stroke="#EA3F3F"
+                fill="#303335"
+                cx="0"
+                cy="0"
+                r="0.8">
+            </circle>
+        </g>
+    </g>
+</svg>
+
+<!-- div wrapping the controls to change the number of hours/minutes/seconds -->
+<div class="controls">
+    <div class="controls__control" data-control="hours">
+        <button>+</button>
+        <span class="control--hours">h</span>
+        <button>-</button>
+    </div>
+
+    <div class="controls__control" data-control="minutes">
+        <button>+</button>
+        <span class="control--minutes">m</span>
+        <button>-</button>
+    </div>
+
+    <div class="controls__control" data-control="seconds">
+        <button>+</button>
+        <span class="control--seconds">s</span>
+        <button>-</button>
+    </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
