@@ -1,0 +1,107 @@
+/* Custom normalize.css */
+html {
+  box-sizing: border-box;
+}
+html *, html *:before, html *:after, html *::before, html *::after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: normal;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+dl,
+dd,
+menu,
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-color: whitesmoke;
+  position: relative;
+}
+
+.slider {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+.slider .slide {
+  width: 20%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  transition: 0.5s;
+}
+.slider .slide:nth-child(1) {
+  background: url("https://blogdesuperheroes.es/wp-content/plugins/BdSGallery/BdSGaleria/58489.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+.slider .slide:nth-child(2) {
+  background: url("https://blogdesuperheroes.es/wp-content/plugins/BdSGallery/BdSGaleria/58488.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+.slider .slide:nth-child(3) {
+  background: url("https://blogdesuperheroes.es/wp-content/plugins/BdSGallery/BdSGaleria/58487.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+.slider .slide:nth-child(4) {
+  background: url("https://blogdesuperheroes.es/wp-content/plugins/BdSGallery/BdSGaleria/58486.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+.slider .slide:nth-child(5) {
+  background: url("https://blogdesuperheroes.es/wp-content/plugins/BdSGallery/BdSGaleria/58485.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+.slider .slide:hover {
+  width: 60%;
+  cursor: pointer;
+}
