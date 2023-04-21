@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap");
+:root {
+  --bg: #0b0b14;
+  --fg: #e6e6f2;
+  --list: #ccc;
+  --rad: 1.8em;
+  --img: url(https://source.unsplash.com/eN6FkYAetF8/1200);
+  --arrow: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAAv0lEQVRoge3ZQQrCMBhE4V8vWBGlCz27C4sF0RtUeC4URYhgSyWTMN8ByjxIN0mEmQ5gC1yBE7DKvWcSYAFceBuANveuSYAzn8qMAdbP8VXEbBIxN2Cfe9tojlHlGFWOUeUYVY5R5RhVjlFVW0ybiBko8Q7gS0w35VvLucfNgNwDRqniaPG4F0v97Lvc237mCBWOUOEIFY5Q4QgVjlDhCBW1RDSJiPIeQ4Gu+IiICKAvPiLidbSOwAFocu8x+6M74YhIpqKdSHIAAAAASUVORK5CYII=");
+  --strength: url("https://assets.codepen.io/13471/icons8-arm-muscle-60.png");
+  --cardio: url("https://assets.codepen.io/13471/icons8-heart-rate-60.png");
+  --games: url("https://assets.codepen.io/13471/icons8-ball-60.png");
+  --nutrition: url("https://assets.codepen.io/13471/icons8-vegetables-60.png");
+  --hydration: url("https://assets.codepen.io/13471/icons8-water-bottle-60.png");
+  --training: url("https://assets.codepen.io/13471/icons8-sneaker-60.png");
+}
+
+.ui-challenge {
+  font-family: Lato, sans-serif;
+  font-size: 0.875rem;
+  color: var(--fg);
+  background: var(--bg);
+  width: 320px;
+  height: 680px;
+  border-radius: var(--rad);
+  box-shadow: 0 1em 3em -1.2em rgba(0, 0, 0, 0.75);
+  resize: horizontal;
+  overflow: hidden;
+}
+.ui-challenge header {
+  height: 16rem;
+  display: grid;
+  grid-template-rows: 1fr;
+  place-items: center;
+  position: relative;
+}
+.ui-challenge .backdrop {
+  overflow: hidden;
+  border-radius: var(--rad) var(--rad) 0 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+}
+.ui-challenge .backdrop:before {
+  content: "";
+  background-color: rgba(199, 51, 169, 0.38);
+  background-image: var(--img);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 152%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0 0 100% 100%;
+}
+.ui-challenge .text {
+  text-align: center;
+  max-width: 70%;
+  margin-top: 2.5rem;
+  z-index: 1;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+.ui-challenge .text h1, .ui-challenge .text p, .ui-challenge .text .labels {
+  margin: 0.5rem 0;
+  line-height: 1;
+}
+.ui-challenge .text h1 {
+  font-size: 1.2rem;
+}
+.ui-challenge .text p {
+  font-weight: 300;
+  line-height: 1.2;
+}
+.ui-challenge .text .labels {
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto 0;
+  mix-blend-mode: screen;
+  opacity: 0.75;
+}
+.ui-challenge .text .label {
+  margin: 0.25em;
+  font-size: 0.675em;
+  font-weight: 700;
+  padding: 0.75em 0.75em;
+  background: var(--fg);
+  color: var(--bg);
+  text-shadow: none;
+  border-radius: 0.4rem;
+}
+.ui-challenge button {
+  width: 4em;
+  height: 4em;
+  position: absolute;
+  bottom: -2em;
+  border: none;
+  border-radius: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  background-size: cover;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.ui-challenge button.back {
+  left: 0.5rem;
+  top: 0.5rem;
+  transform: scale(0.8);
+  mix-blend-mode: screen;
+  opacity: 0.5;
+}
+.ui-challenge button.play {
+  box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.1);
+  background-image: url(https://images.unsplash.com/photo-1579546929662-711aa81148cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=120&h=120&q=80);
+}
+.ui-challenge button .icon {
+  width: 2em;
+  height: 2em;
+  transform: scale(0.875);
+  fill: white;
+  filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.4));
+  transition: all 0.15s ease;
+}
+.ui-challenge button:hover {
+  bottom: -1.875em;
+  opacity: 1;
+}
+.ui-challenge button:hover .icon {
+  transform: scale(1);
+}
+.ui-challenge .exercises h2 {
+  font-size: 0.875rem;
+  font-weight: 300;
+  opacity: 0.35;
+  margin: 2.75rem auto 0.75rem;
+  padding: 0 1.25rem;
+  max-width: 26rem;
+}
+.ui-challenge .exercises ul {
+  color: var(--list);
+  font-size: 0.875rem;
+  font-weight: 600;
+  list-style: none;
+  margin: 0 2px;
+  padding: 0;
+}
+.ui-challenge .exercises ul li a {
+  display: flex;
+  align-items: center;
+  padding: 0 1.2rem;
+  height: 3.5em;
+  color: inherit;
+  font-style: none;
+  text-decoration: none;
+  max-width: 26rem;
+  margin: auto;
+}
+.ui-challenge .exercises ul li i {
+  background-image: var(--strength);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 1.33rem;
+  height: 1.33rem;
+  margin-right: 1rem;
+}
+.ui-challenge .exercises ul li:nth-child(2) i:first-child {
+  background-image: var(--cardio);
+}
+.ui-challenge .exercises ul li:nth-child(3) i:first-child {
+  background-image: var(--games);
+}
+.ui-challenge .exercises ul li:nth-child(4) i:first-child {
+  background-image: var(--training);
+}
+.ui-challenge .exercises ul li:nth-child(5) i:first-child {
+  background-image: var(--nutrition);
+}
+.ui-challenge .exercises ul li:nth-child(6) i:first-child {
+  background-image: var(--hydration);
+}
+.ui-challenge .exercises ul li:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.ui-challenge .exercises ul li span {
+  flex: 1 1 auto;
+  background: linear-gradient(90deg, var(--list) 0%, #6cf0a7 25%, #e962be 50%, #9890e3 75%, var(--list) 100%) repeat;
+  background-position: 0% 50%;
+  background-size: 50rem;
+  -webkit-background-clip: text;
+          background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.ui-challenge .exercises ul li a:hover span {
+  -webkit-animation: span-hover linear 3s infinite;
+          animation: span-hover linear 3s infinite;
+}
+.ui-challenge .exercises ul li i.arrow {
+  background-image: var(--arrow);
+  background-size: 70%;
+  margin: 0;
+  transform-origin: right center;
+}
+.ui-challenge .exercises ul li a:hover i.arrow {
+  -webkit-animation: boing 0.8s ease infinite;
+          animation: boing 0.8s ease infinite;
+}
+
+@-webkit-keyframes span-hover {
+  0% {
+    background-position: 0rem 0%;
+  }
+  60%, 100% {
+    background-position: -50rem 0%;
+  }
+}
+
+@keyframes span-hover {
+  0% {
+    background-position: 0rem 0%;
+  }
+  60%, 100% {
+    background-position: -50rem 0%;
+  }
+}
+@-webkit-keyframes boing {
+  0%, 100% {
+    transform: translateY(0) translateX(-24%) scaleX(1) scaleY(1);
+  }
+  50% {
+    transform: translateY(0) translateX(0%) scaleX(0.9) scaleY(1.1);
+  }
+}
+@keyframes boing {
+  0%, 100% {
+    transform: translateY(0) translateX(-24%) scaleX(1) scaleY(1);
+  }
+  50% {
+    transform: translateY(0) translateX(0%) scaleX(0.9) scaleY(1.1);
+  }
+}
+#app {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 50px;
+  place-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  color: white;
+  background: #1d1d25;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+a {
+  color: #d60489;
+}
+
+.credit {
+  font-size: 0.75rem;
+  grid-column: 1/3;
+}
