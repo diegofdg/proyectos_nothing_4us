@@ -1,0 +1,412 @@
+:root {
+  --c1: #7400b8;
+  --c2: #48bfe3;
+  --c3: #80ffdb;
+  --size: 100px;
+}
+
+body,
+html {
+  color: white;
+  background: #100034;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+
+button {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: bold;
+  font-size: 3em;
+  background: rgba(0, 0, 0, 0.25);
+  color: white;
+  border: none;
+  width: calc(var(--size) * 3);
+  height: var(--size);
+  border-radius: var(--size);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-inline: 3em;
+  transition: all 0.2s ease;
+}
+
+button em {
+  transform: scale(0.95);
+}
+
+button.press {
+  -webkit-animation: jello-horizontal 0.66s both;
+          animation: jello-horizontal 0.66s both;
+}
+
+button:hover {
+  box-shadow: 0 0 20px var(--c1);
+}
+
+button:hover em {
+  transform: scale(1.05);
+}
+
+svg {
+  color: white;
+  max-height: 100%;
+  fill: currentColor;
+}
+
+.cls-3 {
+  stroke: black;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 30;
+}
+
+#brain-sharp {
+  fill: #fcdfef;
+  filter: drop-shadow(0 0 8px #fcdfef);
+}
+
+#brain-sharp .cls-3 {
+  stroke-width: 5;
+}
+
+#brain-nodes .brain {
+  fill: #baa5cd;
+  filter: drop-shadow(0 0 17px var(--c2));
+}
+
+#brain-nodes .brain path:not(.cls-4) {
+  opacity: 0.25;
+  fill: white;
+  stroke: white;
+}
+
+#brain-nodes .nodes {
+  stroke: white;
+  fill: var(--c2);
+  stroke-width: 10;
+  transform: scale(0.85);
+  filter: drop-shadow(0 0 7px var(--c2));
+}
+
+#brain-circuits {
+  filter: drop-shadow(0 0 15px #a1d4cc);
+}
+
+#brain-circuits .brain {
+  fill: #a1d4cc;
+}
+
+#brain-circuits .brain path:not(.cls-4) {
+  opacity: 0;
+}
+
+#brain-circuits .circuits {
+  fill: white;
+  stroke-width: 2;
+  transform: scale(1.3);
+  z-index: 2;
+  filter: drop-shadow(0 0 15px var(--c2));
+}
+
+#brain-galaxy {
+  filter: drop-shadow(0 0 20px #f3c4ff);
+  border: #f3c4ff;
+}
+
+#brain-galaxy .brain {
+  fill: url(#gimg);
+  stroke: rgba(255, 255, 255, 0.5);
+  stroke-width: 8;
+}
+
+#brain-galaxy .brain path:not(.cls-4) {
+  opacity: 0;
+}
+
+#brain-galaxy .galaxy {
+  fill: white;
+  transform: scale(1.1);
+  z-index: 2;
+  filter: drop-shadow(0 0 55px #f3c4ff);
+  mix-blend-mode: color-dodge;
+}
+
+#brain-galaxy-mask {
+  fill: url(#galaxy-gradient);
+}
+
+#brain-galaxy .galaxy .cls-3 {
+  stroke: url(#galaxy-gradient);
+  filter: drop-shadow(0 0 30px var(--c2));
+  mix-blend-mode: hard-light;
+}
+
+#brain-galaxy .galaxy .cls-4 {
+  fill: var(--c1);
+  filter: drop-shadow(0 0 30px var(--c1));
+}
+
+#brain-galaxy .galaxy .cls-5 {
+  fill: var(--c3);
+  filter: drop-shadow(0 0 30px var(--c3));
+}
+
+#expander {
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  display: grid;
+  place-items: center;
+}
+
+#expander > * {
+  display: grid;
+  place-items: center;
+  width: var(--size);
+  height: var(--size);
+}
+
+#expainder .brains {
+  display: grid;
+}
+
+#expander * {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#head {
+  fill: rgba(255, 255, 255, 0.6);
+  transform: scale(0.9) rotate(-5deg);
+  transition: all 1s cubic-bezier(0.7, -0.56, 0.04, 1.07);
+}
+
+#expander .brains > *:not(#head) {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+}
+
+.brains,
+.brains * {
+  position: relative;
+  transition: all 0.5s ease;
+  transition: all 1s cubic-bezier(0.7, -0.56, 0.04, 1.07);
+}
+
+.brains {
+  transform: translateX(7.5%) translateY(-20%) scale(0.25);
+}
+
+#expander.lvl1 .brains #brain-smooth {
+  opacity: 1 !important;
+}
+
+#expander.lvl2 .brains {
+  transform: translateX(7.5%) translateY(-20%) scale(0.4);
+}
+
+#expander.lvl2 .brains #brain-sharp {
+  opacity: 1 !important;
+}
+
+#expander.lvl3 .brains {
+  transform: translateX(7.5%) translateY(-18%) scale(0.75);
+}
+
+#expander.lvl3 .brains #brain-nodes {
+  opacity: 1 !important;
+}
+
+#expander.lvl3 #head {
+  fill: var(--c2);
+  transform: scale(1) rotate(-2deg);
+}
+
+#expander.lvl4 .brains {
+  transform: translateX(7.5%) translateY(-18%) scale(1) rotate(5deg);
+}
+
+#expander.lvl4 .brains #brain-circuits {
+  opacity: 1 !important;
+  -webkit-animation: vibrate-1 0.4s linear infinite both;
+          animation: vibrate-1 0.4s linear infinite both;
+}
+
+#expander.lvl4 #head {
+  fill: var(--c3);
+  transform: scale(1.3) rotate(3deg);
+  filter: drop-shadow(0 0 10px var(--c3)) drop-shadow(0 0 2px rgba(255, 255, 255, 0.3));
+}
+
+#expander.lvl5 .brains {
+  transform: translateX(7.5%) translateY(-25%) scale(1.5);
+}
+
+#expander.lvl5 .brains #brain-galaxy {
+  opacity: 1 !important;
+  -webkit-animation: vibrate-1 0.28s linear infinite both;
+          animation: vibrate-1 0.28s linear infinite both;
+}
+
+#expander.lvl5 #head {
+  fill: var(--c1);
+  transform: scale(1.6) rotate(9deg);
+  filter: drop-shadow(0 0 14px var(--c1)) drop-shadow(0 0 8px var(--c1)) drop-shadow(0 0 2px rgba(255, 255, 255, 0.5));
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2023-3-23 16:13:39
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation jello-horizontal
+ * ----------------------------------------
+ */
+@-webkit-keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2023-3-23 19:2:3
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation vibrate-1
+ * ----------------------------------------
+ */
+@-webkit-keyframes vibrate-1 {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes vibrate-1 {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+.social-icon {
+  stroke-width: 1.25;
+  stroke: cyan;
+  fill: transparent;
+  background: transparent;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 24px;
+  height: 24px;
+  z-index: 10;
+  -webkit-animation: iconsLoad 10s ease both 1s;
+          animation: iconsLoad 10s ease both 1s;
+}
+
+.social-icon path {
+  fill: none;
+}
+
+.social-icon.twitter {
+  right: 40px;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+@-webkit-keyframes iconsLoad {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes iconsLoad {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
