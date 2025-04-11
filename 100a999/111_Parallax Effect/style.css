@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Mooli&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Comfortaa", cursive;
+}
+
+body {
+  min-height: 100dvh;
+  overflow-x: hidden;
+  background: #fff;
+  font-family: "Mooli", sans-serif;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  color: #112434;
+  font-weight: 700;
+  font-size: clamp(1.1rem, 6vw, 1.7rem);
+  text-decoration: none;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation li {
+  list-style: none;
+  margin-left: 20px;
+}
+
+.navigation li a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #112434;
+  border-radius: 20px;
+  font-size: clamp(0.9rem, 6vw, 1rem);
+}
+
+.navigation li a:hover,
+.navigation li a.active {
+  background: #112434;
+  color: #fff;
+}
+
+.parallax {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150dvh;
+  background: rgb(206, 245, 223);
+  background: radial-gradient(
+    circle,
+    rgba(206, 245, 223, 0.4) 34%,
+    rgba(206, 245, 223, 1) 68%
+  );
+}
+
+.parallax img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+
+#title {
+  position: absolute;
+  top: 13%;
+  font-size: clamp(2rem, 6vw, 4rem);
+  color: #000;
+  z-index: 50;
+}
+
+.blog {
+  position: relative;
+  padding: 120px 150px 20px;
+  background: #f6f0e7;
+}
+
+.blog::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: rgb(246, 240, 231);
+  background: radial-gradient(
+    circle,
+    rgba(246, 240, 231, 1) 54%,
+    rgba(0, 114, 125, 1) 99%
+  );
+  z-index: 999;
+}
+
+.blog h2 {
+  font-size: clamp(2rem, 6vw, 3rem);
+  color: #000;
+  margin: 60px 0 40px;
+  text-align: center;
+}
+
+.blog p {
+  font-size: clamp(1rem, 6vw, 1.3rem);
+  color: #000;
+  font-weight: 400;
+  margin-bottom: 30px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.cards {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  padding: 60px 60px;
+  background: #f6f0e7;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(100%, 450px);
+  background-color: #fff;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  padding: 30px 40px;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  aspect-ratio: 1/1;
+  margin: 20px;
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 20px 0 20px;
+  text-align: center;
+  color: #000;
+}
+
+.card p {
+  font-size: 1rem;
+  text-align: justify;
+  line-height: 1.5;
+  color: #000;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to bottom,
+    rgba(206, 245, 223, 0.9),
+    rgba(164, 209, 198, 0.9),
+    rgba(128, 173, 172, 0.9),
+    rgba(72, 161, 170, 0.9)
+  );
+  border-radius: 20px;
+  list-style: none;
+  z-index: 1;
+  opacity: 0;
+  padding: 20px 40px;
+  transition: all 0.4s ease-in-out;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+@media (max-width: 1300px) {
+  header {
+    padding: 30px 50px;
+  }
+  
+  #title {
+    top: 16%;
+  }
+  
+  .parallax {
+    height: 120dvh;
+  }
+  
+  .blog {
+    padding: 100px 120px 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .navigation li {
+    margin-left: 10px;
+  }
+
+  .parallax {
+    height: 100dvh;
+  }
+
+  #title {
+    top: 20%;
+  }
+
+  .blog {
+    padding: 90px 100px 20px;
+  }
+
+  .cards {
+    padding: 40px 40px;
+  }
+
+  .card h3 {
+    margin: 20px 0 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navigation li {
+    margin-left: 5px;
+  }
+  
+  header {
+    padding: 30px 10px;
+  }
+
+   #title {
+    top: 40%;
+  }
+  
+   .blog {
+    padding: 90px 40px 20px;
+  }
+  
+  .blog p {
+    font-size: 1rem;
+  }
+  
+  .card {
+      width: min(100%, 450px);
+  }
+  
+  .card h3 {
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    font-size: 0.85rem;
+    text-align: unset;
+  }
+}
