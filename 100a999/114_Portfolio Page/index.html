@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> Portfolio Page - Nothing4us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.2.2/css/flat-ui.css'>
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav class="navbar navbar-inverse navbar-fixed-top transparent">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+      <a class="navbar-brand" href="#" target="newwindow">Nothing4us</a>
+    </div> <!-- .navbar-header -->
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div> <!-- .navbar-collapse -->
+  </div> <!-- .container -->
+</nav>
+<main data-spy="scroll" data-target=".navbar" data-offset="50">
+  <div class="jumbotron photo-cover text-inverse">
+      <div class="col-md-6 text-center center">
+        <h1>Nothing4us</h1>
+        <p >Software engineer</p>
+        <a href="#about">
+        <span class="fui-triangle-down large"></span>
+        </a>
+      </div> <!-- .col-md-6 -->
+    </div> <!-- .jumbotron -->
+  <div id="about" class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class=" col-md-8 col-md-offset-2 text-center">
+        <h2>About</h2>
+          <hr>
+        <p class="lead">
+          Hi, my name's  - I'm a Software engineer and Vue core team member
+        </p>
+        <p>
+          I enjoy playing squash, tennis, and football. 
+          </p>
+        <img src="http://2.gravatar.com/avatar/e71155c8ed35fb40c1047fd0046b02de?s=100&r=pg&d=mm" alt="Edd Yerburgh" class="center-block img-responsive img-circle"/>
+        </div> <!-- .col-md-8 -->
+      </div> <!-- .row -->
+    </div> <!-- .container -->
+  </div> <!-- #about -->  
+  <div id="portfolio" class="jumbotron background-primary text-inverse">
+    <div class="container">
+      <div class="row">
+        <h2 class="text-center">Portfolio</h2>
+        <hr>
+        <div class="col-xs-6 col-md-3">
+          <a class="thumbnail" page="avoriaz">
+             <svg aria-hidden="true" class="thumbnail-svg" data-prefix="fas" data-icon="vial" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512" class="svg-inline--fa fa-vial fa-w-15 fa-3x"><path fill="currentColor" d="M477.7 186.1L309.5 18.3c-3.1-3.1-8.2-3.1-11.3 0l-34 33.9c-3.1 3.1-3.1 8.2 0 11.3l11.2 11.1L33 316.5c-38.8 38.7-45.1 102-9.4 143.5 20.6 24 49.5 36 78.4 35.9 26.4 0 52.8-10 72.9-30.1l246.3-245.7 11.2 11.1c3.1 3.1 8.2 3.1 11.3 0l34-33.9c3.1-3 3.1-8.1 0-11.2zM318 256H161l148-147.7 78.5 78.3L318 256z" class=""></path></svg>
+              <div class="thumbnail-overlay" page="avoriaz">
+                <span class="glyphicon glyphicon-info-sign text-inverse large center"></span>
+              </div>
+          </a>
+        </div> <!-- .col-md-3 -->
+        <div class="col-xs-6 col-md-3">
+          <a class="thumbnail" page="vue-test-utils">
+            <svg aria-hidden="true" class="thumbnail-svg" data-prefix="fab" data-icon="vuejs" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-vuejs fa-w-14 fa-3x"><path fill="currentColor" d="M356.9 64.3H280l-56 88.6-48-88.6H0L224 448 448 64.3h-91.1zm-301.2 32h53.8L224 294.5 338.4 96.3h53.8L224 384.5 55.7 96.3z" class=""></path></svg>
+            <div class="thumbnail-overlay" page="vue-test-utils">
+              <span class="glyphicon glyphicon-info-sign text-inverse large center"></span>
+            </div>
+          </a>
+        </div> <!-- .col-md-3 -->
+        <div class="col-xs-6 col-md-3">
+          <a class="thumbnail" page="book">
+            <svg aria-hidden="true" class="thumbnail-svg" data-prefix="fas" data-icon="book" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-book fa-w-14 fa-3x"><path fill="currentColor" d="M448 360V24c0-13.3-10.7-24-24-24H96C43 0 0 43 0 96v320c0 53 43 96 96 96h328c13.3 0 24-10.7 24-24v-16c0-7.5-3.5-14.3-8.9-18.7-4.2-15.4-4.2-59.3 0-74.7 5.4-4.3 8.9-11.1 8.9-18.6zM128 134c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm0 64c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm253.4 250H96c-17.7 0-32-14.3-32-32 0-17.6 14.4-32 32-32h285.4c-1.9 17.1-1.9 46.9 0 64z" class=""></path></svg>
+            <div class="thumbnail-overlay" page="book">
+              <span class="glyphicon glyphicon-info-sign text-inverse large center"></span>
+            </div>            
+          </a>
+        </div> <!-- .col-md-3 -->
+        <div class="col-xs-6 col-md-3">
+          <a class="thumbnail" page="blog">
+            <svg class="thumbnail-svg" aria-hidden="true" data-prefix="fas" data-icon="rss" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-rss fa-w-14 fa-3x"><path fill="currentColor" d="M128.081 415.959c0 35.369-28.672 64.041-64.041 64.041S0 451.328 0 415.959s28.672-64.041 64.041-64.041 64.04 28.673 64.04 64.041zm175.66 47.25c-8.354-154.6-132.185-278.587-286.95-286.95C7.656 175.765 0 183.105 0 192.253v48.069c0 8.415 6.49 15.472 14.887 16.018 111.832 7.284 201.473 96.702 208.772 208.772.547 8.397 7.604 14.887 16.018 14.887h48.069c9.149.001 16.489-7.655 15.995-16.79zm144.249.288C439.596 229.677 251.465 40.445 16.503 32.01 7.473 31.686 0 38.981 0 48.016v48.068c0 8.625 6.835 15.645 15.453 15.999 191.179 7.839 344.627 161.316 352.465 352.465.353 8.618 7.373 15.453 15.999 15.453h48.068c9.034-.001 16.329-7.474 16.005-16.504z" class=""></path></svg>
+            <div class="thumbnail-overlay" page="blog">
+              <span class="glyphicon glyphicon-info-sign text-inverse large center"></span>
+            </div>            
+          </a>
+        </div> <!-- .col-md-3 -->        
+      </div> <!-- .row -->
+    </div> <!-- .container -->
+  </div> <!-- #portfolio -->
+  <div id="contact" class="jumbotron">
+    <div class="container">
+      <div class="col-md-8 col-md-offset-2 text-center">
+        <h2 class="">Get In Touch</h2>
+        <hr>
+        <form action="mailto:nothing4us@gmail.com"  enctype="text/plain" method="post">
+        <div class="form-group">
+          <label for="InputEmail">Email address</label>
+          <input type="email" class="form-control" id="InputEmail" placeholder="Email">
+        </div> <!-- .form-group -->
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" class="form-control" rows="3"></textarea>
+        </div> <!-- .form-group -->
+        <input type="submit" name="submit" class="btn btn-inverse">
+      </form>
+      </div> <!-- .col-md-8 -->
+    </div> <!-- .container -->
+  </div> <!-- #contact -->
+
+<div class="text-center text-inverse navbar-inverse">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col col-md-4">
+            <h3>Location</h3>
+                <p>London</p>
+        </div> <!-- .footer-col -->
+        <div class="footer-col col-md-4">
+            <h3>Connect With Me</h3>
+            <ul class="list-inline">
+              <li>
+                   <a class="medium" href="#" target="newwindow"><span class="fui-github"></span></a>
+              </li>
+              <li>
+                  <a class="medium" href="#" target="newwindow"><span class="fui-linkedin"></span></a>
+              </li>
+              <li>
+                  <a class="medium" href="#" target="newwindow"><span class="fui-twitter"></span></a></a>
+              </li>
+            </ul>
+        </div> <!-- .footer-col -->
+        <div class="footer-col col-md-4">
+            <h3>Hire Me</h3>
+            <p>I'm available for workshops</p>
+        </div> <!-- .footer-col -->
+      </div> <!-- .row -->
+    </div> <!-- .container --> 
+    <div class="background-secondary">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+             Copyright © Nothing4us 2023
+          </div> <!-- .col-lg-12 -->
+        </div> <!-- .row -->
+      </div> <!-- .container  -->
+    </div> <!-- .background-secondary -->
+  </div> <!--  -->
+<div id="avoriaz" class="full-screen">
+  <div class="container">
+      <div class="col-md-6 text-center center">
+      <div class="row">
+      </div> <!-- .row -->           
+        <p class="lead">avoriaz is Vue testing utility library.</p>
+      <hr>
+      <div class="row">
+        <div class="col-md-3 col-md-offset-3">
+          <a class="btn-inverse btn-block btn-lg" target="_blank" href="#">View</a>
+        </div> <!-- .col-md-6 -->
+        <div class="col-md-3">
+          <a class="btn-danger btn-lg close-window btn-block">Close</a>
+        </div> <!-- .col-md-6 -->        
+      </div> <!-- .row -->      
+    </div> <!-- .col-md-6 -->
+  </div> <!-- .container -->
+</div> <!-- .full-screen -->
+<div id="vue-test-utils" class="full-screen">
+  <div class="container">
+    <div class="col-md-6 text-center center">
+      <div class="row">
+      </div> <!-- .row -->       
+      <p class="lead">
+        The official Vue testing library.
+      </p>
+      <p>
+        I'm the lead author and maintainer of Vue Test Utils.
+      </p>
+      <hr>
+      <div class="row">
+        <div class="col-md-3 col-md-offset-3">
+          <a class="btn-inverse btn-block btn-lg" target="newwindow" href="#">View</a>
+        </div> <!-- .col-md-6 -->
+        <div class="col-md-3">
+          <a class="btn-danger btn-lg close-window btn-block">Close</a>
+        </div> <!-- .col-md-6 -->        
+      </div> <!-- .row -->      
+    </div> <!-- .col-md-6 -->
+  </div> <!-- .container -->
+</div> <!-- .full-screen -->
+<div id="book" class="full-screen">
+  <div class="container">
+    <div class="col-md-6 text-center center">
+      <div class="row">
+      </div> <!-- .row -->          
+      <p class="lead">Testing Vue.js Applications</p>
+      <p>
+       Learn how to test Vue.js applications with my book.</p>
+      <hr>
+      <div class="row">
+        <div class="col-md-3 col-md-offset-3">
+          <a class="btn-inverse btn-block btn-lg" target="_blank" href="#">View</a>
+        </div> <!-- .col-md-6 -->
+        <div class="col-md-3">
+          <a class="btn-danger btn-lg close-window btn-block">Close</a>
+        </div> <!-- .col-md-6 -->        
+      </div> <!-- .row -->
+    </div> <!-- .col-md-6 -->
+  </div> <!-- .container -->
+</div> <!-- .full-screen -->
+<div id="blog" class="full-screen">
+  <div class="container">
+    <div class="col-md-6 text-center center">
+      <div class="row">
+      </div> <!-- .row -->
+      <p class="lead">
+        My personal blog
+      </p>
+      <hr>
+      <div class="row">
+        <div class="col-md-3 col-md-offset-3">
+          <a class="btn-inverse btn-block btn-lg" target="_blank" href="#">View</a>
+        </div> <!-- .col-md-6 -->
+        <div class="col-md-3">
+          <a class="btn-danger btn-lg close-window btn-block">Close</a>
+        </div> <!-- .col-md-6 -->        
+      </div> <!-- .row -->
+    </div> <!-- .col-md-6 -->
+  </div> <!-- .container -->
+</div> <!-- .full-screen -->
+</main>
+<!-- partial -->
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
