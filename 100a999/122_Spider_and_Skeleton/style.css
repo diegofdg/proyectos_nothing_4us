@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+body{
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  display: flex;
+	margin: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: #30354f;
+	padding-top: 20px;
+
+}
+::-webkit-scrollbar{
+  display: none;
+}
+.container{
+  border-radius: 15px;
+  max-width: 600px;
+  min-width: 600px;
+  height: 300px;
+  background-color: #040517;
+  padding: 0;
+  overflow: hidden;
+  background-image: url("https://github.com/jovanjohn1/hosted-assets/blob/main/Photo%20bg/Night%20bg%20freepik/Buildings%20upklyak%20freepik%20big%20canva%202.png?raw=true");
+/*credits:   image by upklyak, retrieved from, https://www.freepik.com/free-vector/cartoon-midnight-city-with-moonlit-public-garden_32591221.htm#query=night%20background%20graphics&position=12&from_view=search&track=ais */
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 0;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.container:hover{
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.road{
+  filter: brightness(90%);
+  height: 2000px;
+  width: 2000px;
+  position: relative;
+  background-image: url("https://github.com/jovanjohn1/hosted-assets/blob/main/Photo%20bg/Night%20bg%20freepik/New%20Project%20(1).png?raw=true");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border-radius: 50%;
+  bottom: 65px;
+  left: -700px;
+  animation: rotation 200s infinite linear;
+  z-index: 1;
+}
+@keyframes rotation {
+    from {
+        transform: rotate(360deg);
+				bottom: 65px;
+  			left: -700px;
+    }
+    to {
+        transform: rotate(0deg);
+				bottom: 65px;
+  			left: -700px;
+    }
+}
+
+.bush{
+  width: 600px;
+  height: 400px;
+  position: relative;
+  z-index: 2;
+  background-image: url("https://github.com/jovanjohn1/hosted-assets/blob/main/Photo%20bg/Night%20bg%20freepik/32591221_2208_w026_n002_2422b_p1_2422.png?raw=true");
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: 2053px;
+}
+.skeleton{
+  position: relative;
+  width: 60px;
+  bottom: -160px;
+  left: 200px;
+  z-index: 3;
+  filter: grayscale(100%);
+  transform: rotate(-10deg);
+}
+a{
+  text-decoration: none;
+  color: #abb3de;
+  margin: 0 50px;
+  font-size: 12px;
+  cursor: pointer;
+  
+}
+.attributes{
+  width: 100%;
+  white-space: nowrap;
+  position: fixed;
+  bottom: 5px;
+  display: flex; 
+  flex-direction: row;
+  justify-content: center;
+	z-index: 5;
+}
+.main{
+	width: auto;
+	height: auto;
+	padding: 10px;
+	margin-top: 100px;
+	position: fixed;
+}
+.web{
+	width: 10px;
+	height: 10px;
+	position: relative;
+	z-index: 3;
+}
+.one{
+	width: 50px;
+	height: 50px;
+	bottom: 410px;
+	left: 50px;
+}
+.two{
+	width: 130px;
+	height: 130px;
+	bottom: 350px;
+	left: -120px;
+}
+.three{
+	width: 70px;
+	height: 70px;
+	bottom: 90px;
+	right: -320px;
+}
+.four{
+	width: 100px;
+	height: 100px;
+	bottom: 120px;
+	right: -300px;
+}
+
+.spider{
+	position: relative;
+	filter: brightness(0%);
+	right: -210px;
+	bottom: 100px;
+	z-index: 4;
+	width: 60px;
+	height: 60px;
+	animation: spidermove 110s infinite linear;
+}
+@keyframes spidermove{
+	0% {bottom: 100px;}
+	18% {bottom: 390px; right: -180px; transform: rotate(-10deg);}
+	25% {bottom: 380px; right: -180px; transform: rotate(-92deg);}
+	45% {bottom: 400px; right: 390px; transform: rotate(-96deg);}
+	55% {bottom: 400px; right: 390px; transform: rotate(-180deg);}
+	70% { right: 390px; bottom: 100px;  transform:rotate(-180deg);}
+	75% {transform: rotate(-270deg); right: 390px; bottom: 100px;}
+	95% {bottom: 100px; transform: rotate(-270deg); right: -210px;}
+	100% {transform: rotate(-360deg); bottom: 100px; right: -210px;}
+}
