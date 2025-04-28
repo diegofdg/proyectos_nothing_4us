@@ -1,0 +1,159 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-color:#d3eefe;
+}
+
+h1{
+    font-family:"Franklin Gothic Medium";
+    color:#43515c;
+    font-size:70px;
+    font-weight:lighter;
+    letter-spacing: -5px;
+    padding: 50px 0px 0px 0px;
+    z-index: 999;
+  position:absolute;
+}
+p{
+    font-family:"Franklin Gothic Medium";
+    color:#43515c;
+    font-size:24px;
+    font-weight:100;
+    z-index: 999;
+}
+
+.first-section{
+    width:100%;
+    height:150vh;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+}
+
+.first-section .images-wrapper {
+    position:absolute;
+}
+
+.ingredient-images{
+    position: absolute;
+    width:400px;
+    left:calc(50%-400px);
+    height:530px;
+    top:420px;
+}
+
+.section_1_01{
+    position: absolute;
+    top:20px;
+    right:-150px;
+}
+.section_1_02{
+    position: absolute;
+    top:90px;
+    right:-20px;
+}
+.section_1_03{
+    position: absolute;
+    top:110px;
+    right:-150px;
+}
+.section_1_04{
+    position: absolute;
+    top:210px;
+    right:-30px;
+}
+.section_1_05{
+    position: absolute;
+    top:235px;
+    right:0px;
+}
+.section_1_06{
+    position: absolute;
+    top:180px;
+    right:60px;
+}
+.section_1_07{
+    position: absolute;
+    top:260px;
+    right:-140px;
+}
+.section_1_08{
+    position: absolute;
+    top:330px;
+    right:-40px;
+}
+.section_1_09{
+    position: absolute;
+    top:380px;
+    right:-140px;
+}
+
+.second-section{
+    width:100%;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    position:relative;
+}
+
+.second-section .images-wrapper{
+    position: absolute;
+    display:flex;
+    padding:200px 0;
+    top:20%;
+    overflow:hidden;
+}
+
+.image-container{
+    overflow:hidden;
+    height:100%;
+}
+
+.third-section{
+    width:100%;
+    height:150vh;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    text-align:center;
+    position:relative;
+}
+
+.third-section .images-wrapper{
+    margin-top:300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.third-section .images-wrapper img{
+    position: absolute;
+}
+
+.forth-section{
+    width:100%;
+    height:150vh;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    text-align:center;
+    position:relative;
+}
+
+.forth-section .images-wrapper{
+    margin-top:300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forth-section .images-wrapper img{
+    position: absolute;
+}
