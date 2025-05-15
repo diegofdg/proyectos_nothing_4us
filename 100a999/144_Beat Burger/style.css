@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap");
+.App {
+  text-align: center;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.component-carousel {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.2s ease-in-out;
+}
+
+.component-carousel img {
+  width: 187px;
+  margin-top: 10px;
+}
+
+.component-carousel:hover {
+  text-decoration: underline;
+}
+
+.component-carousel:hover img {
+  transform: translate(2px, 2px);
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #142522;
+  font-family: sans-serif;
+}
+
+.burger-drum {
+  overflow: hidden;
+  position: relative;
+}
+
+.burger-drum .container {
+  width: 100vw;
+  max-width: 1800px;
+  height: 60vw;
+  min-height: 400px;
+  max-height: 100vh;
+}
+
+.info {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  width: 40vw;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  transform: translateX(-50vw);
+  transition: transform 0.5s ease-in-out;
+}
+
+.presents {
+  margin-bottom: 20px;
+}
+
+.burger .info {
+  transform: translateX(0);
+}
+
+h1 {
+  font-family: "Metal Mania", cursive;
+  font-size: clamp(40px, 6vw, 100px);
+  letter-spacing: 5px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+p {
+  text-align: left;
+  font-size: 20px;
+  margin-bottom: 40px;
+  /* letter-spacing: 0.03em; */
+  line-height: 130%;
+}
+
+button {
+  margin-right: 40px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px 30px;
+  border: solid 1px white;
+  color: white;
+  font-size: 30px;
+  /* text-transform: uppercase; */
+  letter-spacing: 3px;
+  font-family: "Metal Mania", cursive;
+  cursor: pointer;
+  outline: solid 1px transparent;
+  outline-offset: 0px;
+  transition-property: background-color, outline-offset, outline;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
+}
+
+button:hover:not(:disabled) {
+  background-color: darkred;
+  outline: solid 1px white;
+  outline-offset: 2px;
+}
+
+button:disabled {
+  opacity: 0.3;
+}
+
+.controls {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  width: calc(100% - 80px);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  transform: translateY(200%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.drums .controls {
+  transform: translateY(0%);
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  font-family: "Metal Mania", cursive;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.loading .loader {
+  opacity: 10;
+}
+
+.controls span {
+  text-transform: uppercase;
+  padding: 2px;
+  display: inline-block;
+  border: 2px solid white;
+  border-bottom: 4px solid white;
+  border-radius: 6px;
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
