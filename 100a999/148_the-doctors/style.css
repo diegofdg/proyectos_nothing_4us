@@ -1,0 +1,351 @@
+@import url(https://fonts.bunny.net/css?family=roboto-condensed:300,400,500,700);
+
+@layer reset, base, cards;
+
+@layer reset{
+  *{
+    box-sizing: border-box;
+  }
+  h1,h2,h3,h4,h5,ul{
+    margin: 0;
+  }
+
+}
+
+@layer base{
+  body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+
+    font-family: 'Roboto Condensed', sans-serif;
+		line-height: 1.5;
+  }
+
+  body::before {
+    content: "";
+    background-image: url('https://raw.githubusercontent.com/cbolson/assets/refs/heads/main/codepen/doctor-who/bg-tardis.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: -10;
+  }
+
+  .sr-only{
+    position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border-width: 0;
+  }
+}
+
+
+@layer cards {
+
+
+.the-doctors {
+  --item-border-clr: rgba(255 255 255 / .5);
+  --item-txt-clr: white;
+
+  --nav-indicator-bg: rgba(3, 39, 59, 0.7);
+  
+  
+  color: var(--item-txt-clr);
+  display: grid;
+  place-content: center;
+  width: 100%;
+  max-width: 20rem; /* max-w-xs */
+  position: relative;
+}
+
+.the-doctors article {
+  --article-width: 70px;
+  --article-height: 100px;
+  --article-transition-duration: 1000ms;
+  --article-transition-delay: 0s; /* delay before card animations start */
+  --article-transition-timing: ease-in-out;
+
+  grid-area: 1/1;
+  transform-origin: center;
+  width: var(--article-width);
+  height: var(--article-height);
+  background-color: black;
+  border: 1px solid var(--item-border-clr);
+  position: relative;
+  z-index: var(--article-0);
+  transition: all var(--article-transition-duration) var(--article-transition-timing);
+  transition-delay: var(--article-transition-delay);
+  overflow: hidden;
+  isolation: isolate;
+
+  transform: translate(var(--translate-x, 0), var(--translate-y, 0));
+   
+	@media (width > 600px){
+    --article-width: 120px;
+    --article-height: 180px;
+   }
+	
+   @media (width > 800px){
+    --article-width: 200px;
+    --article-height: 250px;
+   }
+}
+
+
+.the-doctors article::before {
+  content: "";
+  background-image: 
+    linear-gradient(to bottom, transparent 40% , rgba(0 0 0 / .75)),
+    var(--bg-img);
+  inset: 0;
+  position: absolute;
+  opacity: 100;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -20;
+}
+
+.the-doctors > input[name="character"]:checked + article::after {
+    opacity: 1;
+    background-image: linear-gradient(to top, black, transparent 75%);
+    transition-delay: 1500ms;
+    z-index: -1;
+}
+
+
+.the-doctors label {
+  cursor: pointer;
+}
+/* main image */
+.the-doctors .avatar {
+  display: block;
+  background-color: black;
+	
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  position: relative;
+  transition: all 1000ms ease-in-out;
+  transition-delay: var(--avatar-transition-delay,0ms);
+  overflow: hidden;
+  clip-path: var(--avatar-clip,circle(100% at 50% 50%));
+  translate: 0 var(--avatar-y,0);
+  
+  & > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-in-out;
+    transition-delay: var(--avatar-img-transition-delay,0ms);
+    scale: var(--avatar-img-scale,1);
+    translate: var(--avatar-img-x,0), var(--avatar-img-y,0);
+    filter: saturate(var(--avatar-img-saturate,25%));
+    &:hover {
+      filter: saturate(100%);
+    }
+  }
+}
+/* button - close*/
+.the-doctors .btnClose {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 20;
+  background-color: black;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-content: center;
+  transition: all 300ms ease-in-out;
+  transition-delay: var(--btn-close-transition-delay,0ms);
+  translate: var(--btn-close-x,8rem);
+  & > span{
+    opacity: 0.5;
+    transition: opacity 150ms ease-in-out, rotate 150ms ease-in-out;
+  }
+  &:hover > span {
+    opacity: 1;
+    rotate: 90deg;
+  }
+   
+}
+
+/* side title */
+.the-doctors h2 {
+  font-size: clamp(0.9rem, 2.5vw + .05rem, 1.4rem);
+	font-weight: 300;
+  letter-spacing: wider;
+  color: white;
+  white-space: nowrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+  writing-mode: vertical-rl;
+  background: linear-gradient(to bottom, black, transparent);
+  height: 50%;
+  transition: all 300ms ease-in-out 750ms;
+  z-index: 20;
+  padding: 1rem 0.5rem;
+	pointer-events: none;
+	opacity:var(--title-opacity,0);
+	@media (width > 800px){
+		opacity: var(--title-opacity,1);
+	}
+}
+/* actor name */
+.the-doctors h3{
+  padding: 0 0 1rem 2rem;
+  text-shadow: 1px 1px rgba(0 0 0);
+}
+/* panel subtitles */
+.the-doctors h4 {
+  padding: 0; /* py-3 px-8 */
+  text-transform: uppercase;
+}
+
+
+.the-doctors > article > div {
+  transition: transform var(--_transition-delay-base) ease-in-out;
+  transition-delay: var(--data-transition-delay,0ms);
+  transform: translateY(var(--data-y,0));
+}
+
+/* panel nav */
+.the-doctors nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+  transition: all 300ms ease-in-out;
+  border-top: 1px solid var(--item-border-clr);
+  border-bottom: 1px solid  var(--item-border-clr);
+
+/* panel nav indicator (current tab) */
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: var(--nav-indicator-bg);
+    transition: all 300ms ease-in-out;
+    z-index: -10;
+    height: 100%;
+    width: calc((100 / var(--items)) * 1%);
+    backdrop-filter: blur(2px); 
+  }
+
+  & > label {
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+    flex: 1;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    & > span {
+      font-size: 1.4rem !important;
+      transition: scale 150ms ease-in-out;
+    }
+    &:hover > span{
+      scale: 1.5;
+    }
+  }
+}
+.the-doctors [data-panels] {
+  display: flex;
+  width: 100%;
+  transition: all 500ms ease-in-out;
+  align-items: center;
+
+  & > div {
+    flex-shrink: 0;
+    width: 100%;
+    height: 200px;
+    overflow-y: auto;
+    padding: 1rem 2rem; 
+    transition: all 500ms ease-in-out;
+    font-size: 0.8rem; 
+  }
+  & ul{
+    padding: 1rem;
+    display: grid;
+    gap: .25rem;
+  }
+}
+
+/* Handle card scaling and positioning when input is checked */
+.the-doctors:has(input[name="character"]:checked) article:not(input[name="character"]:checked + article) {
+  scale: 0;
+  rotate: -10deg;
+}
+
+.the-doctors > input[name="character"]:checked + article {
+    --_transition-delay-base: 500ms;  /* base time for item elements delay */
+    --_transition-delay-steps: 500ms;
+
+     z-index: 10000;
+    transform: translate(0) !important; /* need to overwrite inline styles defined by JS */
+    
+
+    --article-width: 300px;
+    --article-height: 500px;
+    --article-transition-delay: var(--_transition-delay-base);
+   
+    --avatar-clip: circle(20% at 50% 35%);
+    --avatar-transition-delay: calc(var(--_transition-delay-base) + var(--_transition-delay-steps) * 2);
+    --avatar-y: -4rem;
+
+    --avatar-img-transition-delay: calc(var(--_transition-delay-base) + var(--_transition-delay-steps) * 3);
+    --avatar-img-saturate: 100%;
+    --avatar-img-scale: .65;
+    --avatar-img-x: -0.5rem;
+    --avatar-img-y: -0.5rem;
+	
+		--title-opacity: 1;
+
+    --data-y: -280px;
+    --data-transition-delay: calc(var(--_transition-delay-base) + var(--_transition-delay-steps) * 4);
+
+    --btn-close-x: 0;
+    --btn-close-transition-delay: calc(var(--_transition-delay-base) + var(--_transition-delay-steps) * 5);
+}
+
+
+/* panel  animations */
+.the-doctors .panel-1:checked ~ article nav::after {
+  transform: translateX(0%);
+}
+.the-doctors .panel-2:checked ~ article nav::after {
+  transform: translateX(100%);
+}
+.the-doctors .panel-3:checked ~ article nav::after {
+  transform: translateX(200%);
+}
+.the-doctors .panel-1:checked ~ article [data-panels] {
+  transform: translateX(0%);
+}
+.the-doctors .panel-2:checked ~ article [data-panels] {
+  transform: translateX(-100%);
+}
+.the-doctors .panel-3:checked ~ article [data-panels] {
+  transform: translateX(-200%);
+}
